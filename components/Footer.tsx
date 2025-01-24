@@ -28,10 +28,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-green-900 text-white py-16">
+    <footer className="bg-blue-900 text-white py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Clinic Overview */}
           <div>
             <div className="flex items-center mb-4">
               <Stethoscope className="w-8 h-8 mr-3 text-white" />
@@ -41,8 +40,6 @@ const Footer = () => {
               Your trusted healthcare partner, dedicated to providing compassionate and innovative medical care.
             </p>
           </div>
-
-          {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
@@ -53,8 +50,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -67,8 +62,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contact Information */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
@@ -91,9 +84,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="mt-12 pt-6 border-t border-green-800 text-center">
+        <div className="mt-12 pt-6 border-t border-blue-800 text-center">
           <p className="text-gray-300">
             © {new Date().getFullYear()} <Link
               href="https://xanahealth.io"

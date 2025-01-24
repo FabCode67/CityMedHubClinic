@@ -80,7 +80,6 @@ export async function fetchExistingSlotsInDate(
 
       return groupedSlots;
     } else {
-      console.error("Failed to fetch existing slots");
     }
   } catch (error) {
     console.error("Error:", error);
