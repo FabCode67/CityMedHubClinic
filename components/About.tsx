@@ -15,7 +15,7 @@ const AboutSection = () => {
                 className="w-full h-[600px] object-cover"
               />
             </div>
-            <div className="absolute bottom-4 right-4 bg-green-800 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div className="absolute bottom-4 right-4 bg-orange-800 text-white px-4 py-2 rounded-lg shadow-lg">
               <p className="text-sm">Modern Healthcare Facility</p>
             </div>
           </div>
@@ -23,7 +23,7 @@ const AboutSection = () => {
           {/* Content Section */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold text-green-900 mb-6">About City MedHub Clinic</h2>
+              <h2 className="text-4xl font-bold text-orange-900 mb-6">About City MedHub Clinic</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 City MedHub Clinic stands as a beacon of compassionate healthcare, 
                 dedicated to delivering high-quality medical services in a modern, 
@@ -32,8 +32,8 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="bg-green-50 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-6">Our Core Vision</h3>
+            <div className="bg-orange-50 p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-orange-800 mb-6">Our Core Vision</h3>
               <div className="space-y-4">
                 {[
                   { 
@@ -53,7 +53,7 @@ const AboutSection = () => {
                     key={index} 
                     className="flex items-start space-x-4 text-gray-700"
                   >
-                    <Icon className="w-6 h-6 text-green-800 flex-shrink-0 mt-1" />
+                    <Icon className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
                     <span className="text-base">{text}</span>
                   </div>
                 ))}

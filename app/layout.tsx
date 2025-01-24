@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Amaris Medical Clinic",
-  description: "Amaris Medical Clinic is a leading medical facility in Rwanda.",
+  title: "City MedHub Clinic",
+  description: "Your health and well-being are our main responsibility",
 };
 
 export default function RootLayout({
