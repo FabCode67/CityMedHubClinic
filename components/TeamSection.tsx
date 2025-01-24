@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Stethoscope,
   Users,
@@ -10,18 +10,7 @@ import {
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
-type TeamMember = {
-  id: number;
-  name: string;
-  role: string;
-  specialty?: string;
-  image?: string;
-  qualifications?: string[];
-  contact?: {
-    phone?: string;
-    email?: string;
-  };
-};
+
 
 const TeamPage = () => {
 
