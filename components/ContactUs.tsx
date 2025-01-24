@@ -1,126 +1,72 @@
-import { FaPhoneAlt, FaEnvelope, FaTwitter, FaLinkedin, FaFacebookF, FaWhatsapp, FaMapMarkerAlt, FaGlobe, FaUser } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from "@/components/ui/card";
+import React from 'react';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock
+} from "lucide-react";
 
-const ContactUsPage = () => {
-    return (
-        <section id='contact' className=" min-h-screen bg-white h-fit text-black py-16">
-            <div className="container max-w-7xl mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div className="flex flex-col justify-center">
-                        <h3 className="md:text-5xl text-4xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
-                        
-                        {/* Location Description Card */}
-                        <Card className="mb-8 bg-[#CCD2DE] backdrop-blur">
-                            <CardContent className="p-6">
-                                <h4 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                                    <FaMapMarkerAlt className="mr-2 text-[#334C7B]" />
-                                    Our Location
-                                </h4>
-                                <p className="text-gray-700 leading-relaxed mb-4">
-                                    Amaris Medical Clinic is strategically located on the KN 2 Ave road, in the neighborhood commonly referred to as Nyamirambo. It is in the City of Kigali, Nyarugenge District, Nyarugenge Sector, Rwampala Cell, right across Club Rafiki and the Nyamirambo Police Station. Amaris Clinic offers easy access for patients, providing quality care without the need for extensive travel.
-                                </p>
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <p className="text-gray-700">
-                                        <strong>Full Address:</strong><br />
-                                        Rwampala Cell, Nyarugenge Sector,<br />
-                                        Nyarugenge District, City of Kigali, Rwanda
-                                    </p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <div className="grid md:grid-cols-2 gap-4 mb-8">
-                            <motion.div 
-                                whileHover={{ scale: 1.02 }}
-                                className="bg-[#CCD2DE] backdrop-blur p-4 rounded-lg shadow-sm"
-                            >
-                                <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
-                                    <FaUser className="mr-2 text-[#334C7B]" />
-                                    Management
-                                </h4>
-                                <p className="text-gray-700 mb-2">Contact Person:</p>
-                                <p className="text-gray-900 font-medium">Angelo Igitego (CEO)</p>
-                            </motion.div>
-
-                            {/* Contact Methods */}
-                            <motion.div 
-                                whileHover={{ scale: 1.02 }}
-                                className="bg-[#CCD2DE] backdrop-blur p-4 rounded-lg shadow-sm"
-                            >
-                                <h4 className="text-lg font-semibold text-gray-800 mb-3">Contact Methods</h4>
-                                <div className="space-y-2">
-                                    <a href="tel:+250788597772" className="flex items-center text-gray-700 hover:text-[#334C7B]">
-                                        <FaPhoneAlt className="mr-2" />
-                                        +250-788-597-772
-                                    </a>
-                                    <a href="mailto:amarisclinic1@gmail.com" className="flex items-center text-gray-700 hover:text-[#334C7B]">
-                                        <FaEnvelope className="mr-2" />
-                                        amarisclinic1@gmail.com
-                                    </a>
-                                    <a href="https://www.amarismedicalclinic.rw" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 hover:text-[#334C7B]">
-                                        <FaGlobe className="mr-2" />
-                                        www.amarismedicalclinic.rw
-                                    </a>
-                                </div>
-                            </motion.div>
-                        </div>
-                        <div className="flex space-x-6 mt-4">
-                            <motion.a
-                                whileHover={{ scale: 1.1 }}
-                                href="https://twitter.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#334C7B] hover:text-blue-600"
-                            >
-                                <FaTwitter size={32} />
-                            </motion.a>
-                            <motion.a
-                                whileHover={{ scale: 1.1 }}
-                                href="https://linkedin.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#334C7B] hover:text-blue-700"
-                            >
-                                <FaLinkedin size={32} />
-                            </motion.a>
-                            <motion.a
-                                whileHover={{ scale: 1.1 }}
-                                href="https://facebook.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#334C7B] hover:text-blue-800"
-                            >
-                                <FaFacebookF size={32} />
-                            </motion.a>
-                            <motion.a
-                                whileHover={{ scale: 1.1 }}
-                                href="https://wa.me/250788597772"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#334C7B] hover:text-green-600"
-                            >
-                                <FaWhatsapp size={32} />
-                            </motion.a>
-                        </div>
-                    </div>
-                    <div className="flex justify-center h-full flex-col space-y-4">
-                        <motion.img
-                            whileHover={{ scale: 1.02 }}
-                            src="/hero6.jpg"
-                            alt="Amaris Medical Clinic Exterior"
-                            className="w-full h-[20rem] object-cover rounded-lg shadow-lg"
-                        />
-                        <motion.img
-                            whileHover={{ scale: 1.02 }}
-                            src="/hero7.jpg"
-                            alt="Amaris Medical Clinic Interior"
-                            className="w-full h-[20rem] object-cover rounded-lg shadow-lg"
-                        />
-                    </div>
-                </div>
+const LocationContactPage = () => {
+  return (
+    <section className="bg-gray-50 py-16">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Location & Contact Information */}
+          <div>
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <MapPin className="w-8 h-8 mr-3 text-green-700" />
+                Our Location
+              </h2>
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <p className="text-gray-700 mb-4">
+                  <strong>Address:</strong> Gahanga Sector, Kicukiro District, Kigali, KK 15 Rd
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4722034049407!2d30.098514!3d-1.9703659999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwNTgnMTMuMyJTIDMwwrAwNSczMC43IkU!5e0!3m2!1sen!2srw!4v1684234567890!5m2!1sen!2srw"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
-        </section>
-    );
+
+           
+          </div>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-gray-600">
+              {"For immediate assistance or to schedule an appointment, please call our clinic directly. Were available 24/7 to address your healthcare needs."}
+            </p>
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                <Phone className="w-6 h-6 mr-3 text-green-700" />
+                Contact Information
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 mr-3 text-green-700" />
+                  <span className="text-gray-700">(+250) 780-553-772</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 mr-3 text-green-700" />
+                  <span className="text-gray-700">info@citymedhubclinic.rw</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-3 text-green-700" />
+                  <span className="text-gray-700">24/7 Emergency Services</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default ContactUsPage;
+export default LocationContactPage;

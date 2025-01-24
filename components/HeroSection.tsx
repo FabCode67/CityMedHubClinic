@@ -1,83 +1,81 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
-import { useRouter } from 'next/navigation';
+import {
+  Phone,
+  Stethoscope,
+  HeartPulse,
+  ShieldCheck
+} from "lucide-react";
 
 const HeroSection = () => {
-
-  const router = useRouter();
-
-  const navigateToTeam = () => {
-    router.push('#team');
-  }
-
   return (
-    <div className="relative overflow-hidden w-full h-fit bg-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-white z-0" />
-      <div className="container px-4 md:px-8 md:max-w-7xl w-full mx-auto my-auto justify-center items-center py-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="relative overflow-hidden w-full min-h-screen flex items-center bg-white">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-white opacity-70 z-0" />
+
+      {/* Content Container */}
+      <div className="container px-4 md:px-8 max-w-7xl w-full mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Text Content */}
           <div className="space-y-8">
-            <div className="bg-blue-100 text-[#334C7B] hover:bg-blue-100 text-lg py-1">
-              Leading Medical Care Provider
+            {/* Badge */}
+            <div className="inline-block px-4 py-2 bg-green-100/80 text-green-800 rounded-full text-base font-medium tracking-wide">
+              Community Health Partner
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
-            Your wellbeing is the reason of our existence at{" "}
-              <span className="text-[#334C7B]">Amaris Medical Clinic</span>
+            {/* Heading */}
+            <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+              Your Health, Our Commitment at <span className="text-green-800 text-3xl lg:text-5xl">City MedHub Clinic</span>
             </h1>
 
-            <p className="text-lg text-gray-600">
-              Experience world-class General medicine and dental care with our team of experienced professionals.
-              We combine cutting-edge technology with compassionate care to give you the
-              healthy, beautiful smile you deserve.
+            {/* Description */}
+            <p className="text-lg text-gray-600 leading-relaxed">
+              At City MedHub Clinic, we provide comprehensive medical services tailored to individuals and families,
+              combining advanced technology with compassionate, personalized care.
             </p>
-            <div className='flex flex-col'>
-            <h2 className="text-xl lg:text-xl font-bold text-[#334C7B]">
-              Our Vision
-            </h2>
-            <p className="text-lg text-gray-600">
-              To be the leading healthcare facility in Kigali, recognized
-              for excellence in patient care, innovation, and
-              compassionate service.
-            </p>
+
+            {/* Features List */}
+            <div className="space-y-3">
+              {[ // Feature List
+                { icon: Stethoscope, text: "Comprehensive Medical Services" },
+                { icon: HeartPulse, text: "Personalized Patient Care" },
+                { icon: ShieldCheck, text: "Advanced Medical Technology" }
+              ].map(({ icon: Icon, text }, index) => (
+                <div key={index} className="flex items-center space-x-3 text-green-800">
+                  <Icon className="w-6 h-6" />
+                  <span className="text-base font-medium">{text}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={navigateToTeam} size="lg" className="bg-[#334C7B] text-white hover:bg-blue-700">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <Button
+                size="lg"
+                className="bg-green-800 text-white hover:bg-green-900 transition-colors duration-300 w-full sm:w-auto"
+              >
                 Book Appointment
               </Button>
-              <a href="tel:+250788597772" className="text-[#334C7B] hover:text-blue-700">
-              <Button size="lg" variant="outline" className="gap-2">
-                <Phone className="w-4 h-4" />
-                Call Us Now
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-green-800 border-green-800 hover:bg-green-50 transition-colors duration-300 w-full sm:w-auto gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Contact Us
               </Button>
-              </a>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4  h-full">
-            <div className="space-y-4 h-full">
+
+          {/* Image Section */}
+          <div className="relative flex items-center justify-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-lg w-full max-w-lg">
               <img
-                src="/hero13.jpg"
-                alt="Modern dental equipment"
-                className="rounded-2xl h12 shadow-lg transform hover:scale-105 transition-transform object-fill  duration-300"
+                src="https://st.depositphotos.com/1594308/2526/i/450/depositphotos_25265551-stock-photo-medical-consultation.jpg"
+                alt="Medical Consultation"
+                className="object-cover h-full w-full transform hover:scale-105 transition-transform duration-500"
               />
-              <img
-                src="/hero4.jpeg"
-                alt="Happy patient"
-                className="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300 object-contain"
-              />
-            </div>
-            <div className="pt- h-full flex flex-col justify-between">
-              <img
-                src="/hero1.jpg"
-                alt="Professional dentist team"
-                className="rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-              <img
-                src="/hero15.jpg"
-                alt="Professional dentist team"
-                className="rounded-2xl h-1/2 shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
+              <div className="absolute inset-0 bg-green-800/10 mix-blend-multiply" />
             </div>
           </div>
         </div>

@@ -17,38 +17,38 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0 bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 md:px-8 px-2">
-        <Link href="/" className="text-medBlue font-bold text-xl">
-          <Image height={300} width={300} src="/amaris_logo1.JPG" alt="Amaris" className="md:h-12 md:w-32 h-10 w-28" />
+        <Link href="/" className="text-medGreen font-bold text-xl">
+          <Image height={300} width={300} src="/citylog.png" alt="Amaris" className="md:h-12 md:w-32  object-contain h-10 w-28" />
         </Link>
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-medBlue focus:outline-none">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-medGreen focus:outline-none">
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
-        <div className={`md:flex space-x-8 text-medBlue ${menuOpen ? 'block' : 'hidden'} md:block hidden`}>
-          <Link href="/" className="hover:text-blue-900">Home</Link>
-          <Link href="#about" className="hover:text-blue-900">About us</Link>
-          <Link href="#partners" className="hover:text-blue-900">Partners</Link>
-          <Link href="#services" className="hover:text-blue-900">Services</Link>
-          <Link href="#team" className="hover:text-blue-900">Team</Link>
-          <Link href="#facilities" className="hover:text-blue-900">Facilities</Link>
-          <Link href="#contact" className="hover:text-blue-900">Contact us</Link>
+        <div className={`md:flex space-x-8 text-medGreen ${menuOpen ? 'block' : 'hidden'} md:block hidden`}>
+          <Link href="/" className="hover:text-green-900">Home</Link>
+          <Link href="#about" className="hover:text-green-900">About us</Link>
+          <Link href="#partners" className="hover:text-green-900">Partners</Link>
+          <Link href="#services" className="hover:text-green-900">Services</Link>
+          <Link href="#team" className="hover:text-green-900">Team</Link>
+          <Link href="#facilities" className="hover:text-green-900">Facilities</Link>
+          <Link href="#contact" className="hover:text-green-900">Contact us</Link>
         </div>
         <div className="space-x-4 hidden md:block">
           <Button
             onClick={() => handleNavigation('https://xanahealth.online/login')}
-            variant="secondary" className="text-white border-medBlue">Sign in</Button>
+             className="text-white border-medGreen bg-green-800 rounded-full">Sign in</Button>
         </div>
       </div>
       {menuOpen && (
         <div className="md:hidden bg-white py-4">
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="/" className="block px-8 py-2 text-medBlue hover:text-blue-900">Home</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#about" className="block px-8 py-2 text-medBlue hover:text-blue-900">About us</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#partners" className="block px-8 py-2 text-medBlue hover:text-blue-900">Partners</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#services" className="block px-8 py-2 text-medBlue hover:text-blue-900">Services</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#team" className="block px-8 py-2 text-medBlue hover:text-blue-900">Team</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#facilities" className="block px-8 py-2 text-medBlue hover:text-blue-900">facilities</Link>
-          <Link onClick={() => setMenuOpen(!menuOpen)} href="#contact" className="block px-8 py-2 text-medBlue hover:text-blue-900">Contact us</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="/" className="block px-8 py-2 text-medGreen hover:text-green-900">Home</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#about" className="block px-8 py-2 text-medGreen hover:text-green-900">About us</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#partners" className="block px-8 py-2 text-medGreen hover:text-green-900">Partners</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#services" className="block px-8 py-2 text-medGreen hover:text-green-900">Services</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#team" className="block px-8 py-2 text-medGreen hover:text-green-900">Team</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#facilities" className="block px-8 py-2 text-medGreen hover:text-green-900">facilities</Link>
+          <Link onClick={() => setMenuOpen(!menuOpen)} href="#contact" className="block px-8 py-2 text-medGreen hover:text-green-900">Contact us</Link>
         </div>
       )}
     </nav>

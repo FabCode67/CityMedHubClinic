@@ -1,117 +1,100 @@
 import React from 'react';
-import {
- 
-    Users,
-    CheckCircle2,
-    Percent,
-    Building,
-    Badge,
-    
-} from 'lucide-react';
-
-const insurancePartners = [
-    {
-        id: 1,
-        name: "Old Mutual",
-        logo: "/old.png",
-        coverage: ["Outpatient Services", "Inpatient Care", "Specialized Treatments", "Emergency Services"],
-        benefits: ["Direct Billing Available", "Wide Network Coverage", "24/7 Customer Support"],
-
-    },
-    {
-        id: 2,
-        name: "Eden Care",
-        logo: "eden.png",
-        coverage: ["Primary Healthcare", "Specialist Consultations", "Maternity Care", "Dental Services"],
-        benefits: ["Quick Claims Processing", "Family Coverage Plans", "Preventive Care Benefits"],
-
-    },
-    {
-        id: 3,
-        name: "Radiant",
-        logo: "/radiant.png",
-        coverage: ["General Medical Services", "Surgical Procedures", "Prescription Medicine", "Lab Tests"],
-        benefits: ["Digital Claims Platform", "Flexible Payment Options", "Comprehensive Coverage"],
-
-    }
-];
+import { Shield, FileCheck, CreditCard, HeartPulse } from "lucide-react";
 
 const PartnersPage = () => {
-    return (
-        <div id='partners' className="min-h-screen pb-12 bg-gray-50">
-            <section className="bg-gradient-to-b bg-[#334C7B]  text-white">
-                <div className="container mx-auto px-4 md:py-16 py-10">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="md:text-4xl text-2xl font-bold mb-4">Insurance Partners</h1>
-                        <p className="md:text-lg text-base text-blue-100 mb-8">
-                            We work with leading insurance providers to ensure our patients receive quality healthcare with convenient coverage options.
-                        </p>
-                        <div className="flex items-center justify-center gap-4 flex-wrap">
-                            <Badge className="px-4 py-2">
-                                Easy Claims Process
-                            </Badge>
-                            <Badge className="px-4 py-2">
-                                Direct Billing Available
-                            </Badge>
-                            <Badge className="px-4 py-2">
-                                24/7 Support
-                            </Badge>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  const insuranceLogos = [
+    "/eden.png",
+    "/old.png", 
+    "/radiant.png",
+    "/eden.png",
+    "/old.png", 
+    "/radiant.png",
+  ];
 
-            <section className="container mx-auto px-4 py-12">
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-                    {insurancePartners.map((partner) => (
-                        <div key={partner.id} className="overflow-hidden items-center w-full h-full hover:shadow-lg shadow-lg justify-center transition-shadow m-auto duration-300">
-                            <img
-                                src={partner.logo}
-                                alt={`${partner.name} logo`}
-                                className="my-auto flex items-center mx-auto justify-center h-52"
-                            />
-                        </div>
-                    ))}
-                </div>
-            </section>
+  const insuranceFeatures = [
+    {
+      icon: Shield,
+      title: "Extensive Coverage",
+      description: "We work with a wide network of insurance providers to maximize your coverage."
+    },
+    {
+      icon: FileCheck,
+      title: "Simplified Billing",
+      description: "Our team helps navigate insurance claims and paperwork efficiently."
+    },
+    {
+      icon: CreditCard,
+      title: "Flexible Payment Options",
+      description: "Multiple payment plans and financial assistance programs available."
+    }
+  ];
 
-            <section className="bg-white py-16">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12">Insurance Process</h2>
-                    <div className="grid md:grid-cols-4 gap-8">
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Building className="w-8 h-8 text-[#334C7B]" />
-                            </div>
-                            <h3 className="text-lg font-semibold mb-2">1. Visit Our Facility</h3>
-                            <p className="text-gray-600">Present your insurance card at reception</p>
-                        </div>
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <CheckCircle2 className="w-8 h-8 text-green-600" />
-                            </div>
-                            <h3 className="text-lg font-semibold mb-2">2. Verification</h3>
-                            <p className="text-gray-600">Quick insurance coverage verification</p>
-                        </div>
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Users className="w-8 h-8 text-[#334C7B]" />
-                            </div>
-                            <h3 className="text-lg font-semibold mb-2">3. Receive Care</h3>
-                            <p className="text-gray-600">Get the medical care you need</p>
-                        </div>
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Percent className="w-8 h-8 text-orange-600" />
-                            </div>
-                            <h3 className="text-lg font-semibold mb-2">4. Settlement</h3>
-                            <p className="text-gray-600">We handle direct billing with insurers</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <section className="bg-green-50 py-16 md:py-24">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div className="text-center mb-12">
+          <HeartPulse className="mx-auto w-16 h-16 text-green-800 mb-4" />
+          <h2 className="text-4xl font-bold text-green-900 mb-4">
+            Insurance & Financial Services
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We work with multiple insurance providers to make your healthcare affordable and accessible.
+          </p>
         </div>
-    );
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Insurance Features */}
+          <div className="space-y-6">
+            {insuranceFeatures.map(({ icon: Icon, title, description }, index) => (
+              <div 
+                key={index} 
+                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center space-x-6"
+              >
+                <div className="bg-green-50 p-4 rounded-xl">
+                  <Icon className="w-8 h-8 text-green-800" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-green-900 mb-2">{title}</h3>
+                  <p className="text-gray-600">{description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Insurance Logos */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-bold text-green-900 mb-8 text-center">
+              Accepted Insurance Providers
+            </h3>
+            <div className="grid grid-cols-3 gap-6">
+              {insuranceLogos.map((logo, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-center justify-center p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors"
+                >
+                  <img 
+                    src={logo} 
+                    alt={`Insurance Provider ${index + 1}`}
+                    className="max-h-16 max-w-full grayscale hover:grayscale-0 transition-all"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            Not sure about your coverage? Our financial counselors are ready to help you understand 
+            your insurance benefits and explore payment options.
+          </p>
+          <button className="mt-6 px-8 py-3 bg-green-800 text-white rounded-full hover:bg-green-900 transition-colors">
+            Verify Insurance
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default PartnersPage;

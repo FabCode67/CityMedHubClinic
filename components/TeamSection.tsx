@@ -1,194 +1,181 @@
-import { FaCalendarAlt } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { 
+  Stethoscope, 
+  Users, 
+  GraduationCap, 
+  Phone, 
+  Mail, 
+  Calendar 
+} from "lucide-react";
 import { motion } from 'framer-motion';
-import getDoctors from '@/app/server/apis';
-import { useEffect, useState } from 'react';
-import { Linkedin, Phone, Users, GraduationCap, Award } from 'lucide-react';
-import { BsTwitterX, BsWhatsapp } from 'react-icons/bs';
-import { TfiEmail } from 'react-icons/tfi';
-import NewAppointment from './Appointment';
 
-type Doctor = {
-    id: number;
-    active: boolean;
-    profile_picture_url?: string;
-    gender?: string;
-    first_name?: string;
-    last_name?: string;
-    role?: string;
+type TeamMember = {
+  id: number;
+  name: string;
+  role: string;
+  specialty?: string;
+  image?: string;
+  qualifications?: string[];
+  contact?: {
     phone?: string;
     email?: string;
+  };
 };
 
 const TeamPage = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
-    const [selectedClinic, setSelectedClinic] = useState<{
-        id: number;
-        first_name: string;
-        last_name: string;
-    } | null>(null);
-    const [teamData, setTeamData] = useState<Doctor[]>([]);
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
 
-    useEffect(() => {
-        const fetchDoctors = async () => {
-            try {
-                const response = await getDoctors();
-                if (response && Array.isArray(response.data)) {
-                    setTeamData(response.data);
-                } else {
-                    console.error("Unexpected response structure:", response);
-                    setTeamData([]);
-                }
-            } catch (error) {
-                console.error("Error fetching doctors:", error);
-                setTeamData([]);
-            }
-        };
-        fetchDoctors();
-    }, []);
+  // Mock data - in a real app, this would come from an API
+  useEffect(() => {
+    const mockTeamData: TeamMember[] = [
+      {
+        id: 1,
+        name: "Dr. Emily Rodriguez",
+        role: "Medical Director",
+        specialty: "Family Medicine",
+        image: "https://pngimg.com/d/doctor_PNG15957.png",
+        qualifications: [
+          "Board Certified",
+          "15+ Years Experience",
+          "Community Health Advocate"
+        ],
+        contact: {
+          phone: "+1 (555) 123-4567",
+          email: "emily.rodriguez@clinicname.com"
+        }
+      },
+      {
+        id: 2,
+        name: "Dr. Michael Chen",
+        role: "Senior Physician",
+        specialty: "Internal Medicine",
+        image: "https://png.pngtree.com/png-vector/20240104/ourmid/pngtree-doctor-of-african-american-descent-standing-alone-against-a-png-image_10944813.png",
+        qualifications: [
+          "Chronic Disease Management",
+          "Preventive Care Specialist",
+          "Patient-Centered Approach"
+        ],
+        contact: {
+          phone: "+1 (555) 234-5678",
+          email: "michael.chen@clinicname.com"
+        }
+      }
+    ];
 
-    const showModal = (doctor: Doctor) => {
-        setSelectedClinic({ id: doctor.id, first_name: doctor.first_name!, last_name: doctor.last_name! });
-        setIsModalVisible(true);
-    };
+    setTeamMembers(mockTeamData);
+  }, []);
 
-    const handleCancel = () => {
-        setIsModalVisible(false);
-    };
+ 
 
-    return (
-        <section id='team' className="bg-gray-100 py-16">
-            <div className="container mx-auto px-4 md:px-8 md:max-w-7xl w-full">
-                <h2 className="text-center text-4xl font-bold text-[#334C7B] mb-12">Meet Our Team</h2>
-                <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-                    <div className="grid md:grid-cols-3 gap-8 mb-8">
-                        <motion.div 
-                            whileHover={{ scale: 1.02 }}
-                            className="flex items-center space-x-4 p-4 bg-blue-50 rounded-lg"
-                        >
-                            <Users className="w-8 h-8 text-[#334C7B]" />
-                            <div>
-                                <h3 className="font-semibold text-gray-800">Expert Staff</h3>
-                                <p className="text-sm text-gray-600">1 Medical Doctor & 1 Dental Therapist</p>
-                            </div>
-                        </motion.div>
-                        <motion.div 
-                            whileHover={{ scale: 1.02 }}
-                            className="flex items-center space-x-4 p-4 bg-blue-50 rounded-lg"
-                        >
-                            <GraduationCap className="w-8 h-8 text-[#334C7B]" />
-                            <div>
-                                <h3 className="font-semibold text-gray-800">Qualified Nurses</h3>
-                                <p className="text-sm text-gray-600">2 Full-time A0 Licensed Nurses</p>
-                            </div>
-                        </motion.div>
-                        <motion.div 
-                            whileHover={{ scale: 1.02 }}
-                            className="flex items-center space-x-4 p-4 bg-blue-50 rounded-lg"
-                        >
-                            <Award className="w-8 h-8 text-[#334C7B]" />
-                            <div>
-                                <h3 className="font-semibold text-gray-800">Continuous Learning</h3>
-                                <p className="text-sm text-gray-600">Regular Training & Development</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-center">
-                        As a general medicine and dental clinic, Amaris has one full time licensed medical doctor, one full dental
-                        therapist, 2 fulltime licensed nurses with A0 degrees. The number of medical staff is expected to increase in the
-                        future, as more insurance partnerships are secured, and after getting the proper regulatory approvals. Our team
-                        regularly undergoes training and development to stay updated on the latest advancements in medicine.
-                    </p>
+  return (
+    <section className="bg-gray-50 py-16">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-12">
+          <Stethoscope className="mx-auto w-12 h-12 text-green-700 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            Our Dedicated Healthcare Team
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Committed to providing compassionate and comprehensive medical care
+          </p>
+        </div>
+
+        {/* Team Highlights */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-xl shadow-md text-center"
+          >
+            <Users className="mx-auto w-10 h-10 text-green-700 mb-4" />
+            <h3 className="font-semibold text-gray-800 mb-2">Experienced Professionals</h3>
+            <p className="text-gray-600">Skilled doctors with diverse medical expertise</p>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-xl shadow-md text-center"
+          >
+            <GraduationCap className="mx-auto w-10 h-10 text-green-700 mb-4" />
+            <h3 className="font-semibold text-gray-800 mb-2">Continuous Learning</h3>
+            <p className="text-gray-600">Regular training and medical education</p>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-xl shadow-md text-center"
+          >
+            <Stethoscope className="mx-auto w-10 h-10 text-green-700 mb-4" />
+            <h3 className="font-semibold text-gray-800 mb-2">Comprehensive Care</h3>
+            <p className="text-gray-600">Personalized treatment approaches</p>
+          </motion.div>
+        </div>
+
+        {/* Team Members */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {teamMembers.map((doctor) => (
+            <motion.div 
+              key={doctor.id}
+              whileHover={{ scale: 1.03 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2">
+                <div>
+                  <img 
+                    src={doctor.image} 
+                    alt={doctor.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="flex md:flex-row flex-col w-full md:space-x-4 space-x-0">
-                    <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        className="p-6 shadow rounded-xl flex flex-col items-center md:w-[30%] w-full md:h-[32rem] h-fit space-y-4"
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {doctor.name}
+                  </h3>
+                  <p className="text-green-700 mb-3">{doctor.role}</p>
+                  <p className="text-gray-600 mb-4">
+                    Specialty: {doctor.specialty}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-700 mb-2">
+                      Professional Highlights
+                    </h4>
+                    <ul className="space-y-1 text-gray-600">
+                      {doctor.qualifications?.map((qual, index) => (
+                        <li key={index} className="flex items-center">
+                          <GraduationCap className="w-4 h-4 mr-2 text-green-600" />
+                          {qual}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex space-x-3 mt-4">
+                    <a 
+                      href={`tel:${doctor.contact?.phone}`} 
+                      className="text-green-700 hover:text-green-900"
                     >
-                        <img
-                            src="/admin2.jpg"
-                            alt="team"
-                            className="object-cover h-full"
-                        />
-                        <div className="text-center">
-                            <h3 className="text-lg font-medium text-gray-800">Angelo IGITEGO</h3>
-                        </div>
-                        <div className="text-center">
-                            <h3 className="text-xl font-semibold mt-0 text-gray-800">Managing Director</h3>
-                        </div>
-                        <div className="flex space-x-4 text-[#334C7B] mt-4">
-                            <a target="_blank" rel="noopener noreferrer" href={`https://x.com/angelo_igitego`}>
-                                <BsTwitterX size={20} />
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={`in/angelo-igitego`}>
-                                <Linkedin size={20} />
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={`tel:+250788597772`}>
-                                <Phone size={20} />
-                            </a>
-                            <a target="_blank" href={`mailto:angelo.igitego@gmail.com`} rel="noopener noreferrer">
-                                <TfiEmail size={20} />
-                            </a>
-                            <a target="_blank" rel="noopener noreferrer" href={`https://wa.me/+250788597772`}>
-                                <BsWhatsapp size={20} />
-                            </a>
-                        </div>
-                    </motion.div>
-                    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3 md:w-[70%] md:mt-0 mt-5 w-full">
-                        {Array.isArray(teamData) ? (
-                            teamData.filter((member) => member.active).filter((member) => member?.role !== "receptionist" && member?.role !== "lab_technician" && member?.role !== "nurse" && member?.role !== "finance_manager").map((member, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="bg-white md:p-3 p-1 text-sm md:rounded-xl rounded-none shadow-lg flex h-fit flex-col items-center space-y-2"
-                                >
-                                    <img
-                                        src={member?.profile_picture_url ? member?.profile_picture_url : member?.gender === "Female" ? "/womandoc.png" : "mandoc.png"}
-                                        alt={member.first_name}
-                                        className="w-full h-40 object-contain"
-                                    />
-                                    <div className="text-center">
-                                        <h3 className="md:text-md text-sm font-semibold text-gray-800">{member.first_name} {member.last_name}</h3>
-                                        <p className="text-[#334C7B]">
-                                            {member.role && (
-                                                member.role.charAt(0).toUpperCase() + member.role.slice(1)
-                                            )}
-                                        </p>
-                                    </div>
-                                    {((member?.role !== "receptionist") && (member?.role !== "nurse") && (member?.role !== "financial_manager") && (member?.role !== "lab_techinician")) ? (
-                                        <motion.button
-                                            whileHover={{ scale: 1.01 }}
-                                            className="bg-[#334C7B] w-full text-sm text-white py-1 lg:px-4 md:text-xs lg:text-sm px-1 rounded-md justify-center mx-auto text-center inline-flex items-center space-x-2"
-                                        >
-                                            <FaCalendarAlt />
-                                            <span onClick={() => showModal(member)}>Book Appointment</span>
-                                        </motion.button>
-                                    ) : (
-                                        <div className="flex space-x-4 py-1 text-[#334C7B]">
-                                            <a target="_blank" rel="noopener noreferrer" href={`tel:${member?.phone}`}>
-                                                <Phone size={20} />
-                                            </a>
-                                            <a target="_blank" href={`mailto:${member?.email}`} rel="noopener noreferrer">
-                                                <TfiEmail size={20} />
-                                            </a>
-                                            <a target="_blank" rel="noopener noreferrer" href={`https://wa.me/${member?.phone}`}>
-                                                <BsWhatsapp size={20} />
-                                            </a>
-                                        </div>
-                                    )}
-                                </motion.div>
-                            ))
-                        ) : (
-                            <p>No team data available.</p>
-                        )}
-                    </div>
+                      <Phone className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={`mailto:${doctor.contact?.email}`} 
+                      className="text-green-700 hover:text-green-900"
+                    >
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
+
+                  <button 
+                    className="mt-4 w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition flex items-center justify-center"
+                  >
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book Appointment
+                  </button>
                 </div>
-            </div>
-            <NewAppointment
-                isModalVisible={isModalVisible}
-                selectedUser={selectedClinic ?? {} as { id: number; first_name: string; last_name: string }}
-                handleCancel={handleCancel}
-            />
-        </section>
-    );
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TeamPage;
