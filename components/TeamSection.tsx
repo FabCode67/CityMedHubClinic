@@ -24,8 +24,6 @@ type TeamMember = {
 
 const TeamPage = () => {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-
-  // Mock data - in a real app, this would come from an API
   useEffect(() => {
     const mockTeamData: TeamMember[] = [
       {
@@ -68,7 +66,7 @@ const TeamPage = () => {
  
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section id='team' className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <Stethoscope className="mx-auto w-12 h-12 text-green-700 mb-4" />
@@ -79,8 +77,6 @@ const TeamPage = () => {
             Committed to providing compassionate and comprehensive medical care
           </p>
         </div>
-
-        {/* Team Highlights */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <motion.div 
             whileHover={{ scale: 1.05 }}
@@ -107,8 +103,6 @@ const TeamPage = () => {
             <p className="text-gray-600">Personalized treatment approaches</p>
           </motion.div>
         </div>
-
-        {/* Team Members */}
         <div className="grid md:grid-cols-2 gap-8">
           {teamMembers.map((doctor) => (
             <motion.div 

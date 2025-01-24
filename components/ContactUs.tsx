@@ -8,10 +8,9 @@ import {
 
 const LocationContactPage = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section id='contact' className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Location & Contact Information */}
           <div>
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">

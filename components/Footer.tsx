@@ -6,6 +6,7 @@ import {
   Mail, 
   Clock 
 } from "lucide-react";
+import Link from 'next/link';
 
 const Footer = () => {
   const services = [
@@ -19,10 +20,11 @@ const Footer = () => {
 
   const quickLinks = [
     "Home",
+    "About",
     "Services",
     "Team",
-    "Appointments",
-    "Contact Us"
+    "Partners",
+    "Contact"
   ];
 
   return (
@@ -58,7 +60,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index} className="text-gray-300 hover:text-white transition">
-                  {link}
+                  <a href={`#${link.toLowerCase().replace(' ', '-')}`}>
+                    {link}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -91,7 +95,12 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-6 border-t border-green-800 text-center">
           <p className="text-gray-300">
-            © {new Date().getFullYear()} City MedHub Clinic. All Rights Reserved.
+            © {new Date().getFullYear()} <Link
+              href="https://xanahealth.io"
+            >
+              XanaHealth
+            </Link>.
+              All Rights Reserved.
           </p>
         </div>
       </div>

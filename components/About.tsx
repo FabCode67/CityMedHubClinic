@@ -3,7 +3,7 @@ import {  ShieldCheck, HeartPulse, Stethoscope } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen flex items-center bg-white">
+    <section id='about' className="min-h-screen flex items-center bg-white">
       <div className="container mx-auto px-4 py-16 md:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}

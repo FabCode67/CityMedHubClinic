@@ -44,7 +44,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section id='services' className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <Stethoscope className="mx-auto w-16 h-16 text-green-700 mb-4" />

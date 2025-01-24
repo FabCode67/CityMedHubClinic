@@ -33,7 +33,7 @@ const FacilitiesPage = () => {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section id='facilities' className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Mission Statement */}

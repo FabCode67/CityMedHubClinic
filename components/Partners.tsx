@@ -30,7 +30,7 @@ const PartnersPage = () => {
   ];
 
   return (
-    <section className="bg-green-50 py-16 md:py-24">
+    <section id='partners' className="bg-green-50 py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="text-center mb-12">
           <HeartPulse className="mx-auto w-16 h-16 text-green-800 mb-4" />
@@ -88,9 +88,12 @@ const PartnersPage = () => {
             Not sure about your coverage? Our financial counselors are ready to help you understand 
             your insurance benefits and explore payment options.
           </p>
-          <button className="mt-6 px-8 py-3 bg-green-800 text-white rounded-full hover:bg-green-900 transition-colors">
-            Verify Insurance
-          </button>
+          <div className="mt-8">
+          <a href='#contact'
+           className=" px-8 py-3 bg-green-800 text-white rounded-full hover:bg-green-900 transition-colors">
+            Contact Us
+          </a>
+          </div>
         </div>
       </div>
     </section>
