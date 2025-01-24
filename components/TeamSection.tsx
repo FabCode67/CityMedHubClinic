@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Stethoscope,
   Users,
@@ -10,61 +10,9 @@ import {
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
-type TeamMember = {
-  id: number;
-  name: string;
-  role: string;
-  specialty?: string;
-  image?: string;
-  qualifications?: string[];
-  contact?: {
-    phone?: string;
-    email?: string;
-  };
-};
+
 
 const TeamPage = () => {
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  useEffect(() => {
-    const mockTeamData: TeamMember[] = [
-      {
-        id: 1,
-        name: "Dr. Emily Rodriguez",
-        role: "Medical Director",
-        specialty: "Family Medicine",
-        image: "https://pngimg.com/d/doctor_PNG15957.png",
-        qualifications: [
-          "Board Certified",
-          "15+ Years Experience",
-          "Community Health Advocate"
-        ],
-        contact: {
-          phone: "+1 (555) 123-4567",
-          email: "emily.rodriguez@clinicname.com"
-        }
-      },
-      {
-        id: 2,
-        name: "Dr. Michael Chen",
-        role: "Senior Physician",
-        specialty: "Internal Medicine",
-        image: "https://png.pngtree.com/png-vector/20240104/ourmid/pngtree-doctor-of-african-american-descent-standing-alone-against-a-png-image_10944813.png",
-        qualifications: [
-          "Chronic Disease Management",
-          "Preventive Care Specialist",
-          "Patient-Centered Approach"
-        ],
-        contact: {
-          phone: "+1 (555) 234-5678",
-          email: "michael.chen@clinicname.com"
-        }
-      }
-    ];
-
-    setTeamMembers(mockTeamData);
-  }, []);
-
-
 
   return (
     <section id='team' className="bg-gray-50 py-16">
@@ -116,7 +64,7 @@ const TeamPage = () => {
             <div className="text-center">
               <h3 className="text-xl font-semibold mt-0 text-gray-800">Managing Director</h3>
             </div>
-            <div className="flex space-x-4 text-teal-600 mt-4">
+            <div className="flex space-x-4 text-orange-600 mt-4">
               <a target="_blank" rel="noopener noreferrer" href="in/gafirita-godfrey">
                 <LinkedinIcon size={20} />
               </a>
