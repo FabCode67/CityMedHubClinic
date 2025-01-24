@@ -30,11 +30,11 @@ const PartnersPage = () => {
   ];
 
   return (
-    <section id='partners' className="bg-green-50 py-16 md:py-24">
+    <section id='partners' className="bg-orange-50 py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="text-center mb-12">
-          <HeartPulse className="mx-auto w-16 h-16 text-green-800 mb-4" />
-          <h2 className="text-4xl font-bold text-green-900 mb-4">
+          <HeartPulse className="mx-auto w-16 h-16 text-orange-800 mb-4" />
+          <h2 className="text-4xl font-bold text-orange-900 mb-4">
             Insurance & Financial Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -50,11 +50,11 @@ const PartnersPage = () => {
                 key={index} 
                 className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center space-x-6"
               >
-                <div className="bg-green-50 p-4 rounded-xl">
-                  <Icon className="w-8 h-8 text-green-800" />
+                <div className="bg-orange-50 p-4 rounded-xl">
+                  <Icon className="w-8 h-8 text-orange-800" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-green-900 mb-2">{title}</h3>
+                  <h3 className="text-xl font-bold text-orange-900 mb-2">{title}</h3>
                   <p className="text-gray-600">{description}</p>
                 </div>
               </div>
@@ -63,14 +63,14 @@ const PartnersPage = () => {
 
           {/* Insurance Logos */}
           <div className="bg-white p-8 rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold text-green-900 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-orange-900 mb-8 text-center">
               Accepted Insurance Providers
             </h3>
             <div className="grid grid-cols-3 gap-6">
               {insuranceLogos.map((logo, index) => (
                 <div 
                   key={index} 
-                  className="flex items-center justify-center p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors"
+                  className="flex items-center justify-center p-4 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors"
                 >
                   <img 
                     src={logo} 
@@ -90,7 +90,7 @@ const PartnersPage = () => {
           </p>
           <div className="mt-8">
           <a href='#contact'
-           className=" px-8 py-3 bg-green-800 text-white rounded-full hover:bg-green-900 transition-colors">
+           className=" px-8 py-3 bg-orange-800 text-white rounded-full hover:bg-orange-900 transition-colors">
             Contact Us
           </a>
           </div>
