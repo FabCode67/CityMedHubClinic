@@ -1,5 +1,5 @@
 import React from 'react';
-import {  ShieldCheck, HeartPulse, Stethoscope } from "lucide-react";
+import { ShieldCheck, HeartPulse, Stethoscope } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -25,10 +25,7 @@ const AboutSection = () => {
             <div>
               <h2 className="text-4xl font-bold text-orange-900 mb-6">About City MedHub Clinic</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                City MedHub Clinic stands as a beacon of compassionate healthcare, 
-                dedicated to delivering high-quality medical services in a modern, 
-                welcoming environment. Our experienced healthcare professionals 
-                leverage advanced technology to provide exceptional patient care.
+                With a team of experienced healthcare professionals, advanced medical technology, and a commitment to patient-centered care, we strive to deliver the best possible outcomes and support for every patient we serve. Whether you’re here for a routine check-up, specialized treatment, or preventive care, City MedHub Clinic is your trusted partner in health.
               </p>
             </div>
 
@@ -36,21 +33,21 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold text-orange-800 mb-6">Our Core Vision</h3>
               <div className="space-y-4">
                 {[
-                  { 
-                    icon: Stethoscope, 
-                    text: "Become a trusted hub of medical services in the region" 
+                  {
+                    icon: Stethoscope,
+                    text: "Become a trusted hub of medical services in the region"
                   },
-                  { 
-                    icon: HeartPulse, 
-                    text: "Deliver accessible, compassionate, and innovative care" 
+                  {
+                    icon: HeartPulse,
+                    text: "Deliver accessible, compassionate, and innovative care"
                   },
-                  { 
-                    icon: ShieldCheck, 
-                    text: "Improve community health and individual well-being" 
+                  {
+                    icon: ShieldCheck,
+                    text: "Improve community health and individual well-being"
                   }
                 ].map(({ icon: Icon, text }, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-start space-x-4 text-gray-700"
                   >
                     <Icon className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />

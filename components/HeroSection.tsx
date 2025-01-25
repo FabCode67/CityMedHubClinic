@@ -11,18 +11,19 @@ const HeroSection = () => {
   return (
     <div className="relative overflow-hidden w-full min-h-screen flex items-center bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-white opacity-70 z-0" />
-      <div className="container px-4 md:px-8 max-w-7xl w-full mx-auto relative z-10">
+      <div className="container lg:py-0 py-12 px-4 md:px-8 max-w-7xl w-full mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
-            Your health and well-being are our main responsibility at <span className="text-orange-800 text-3xl lg:text-5xl">City MedHub Clinic</span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+              Welcome to
+              <span className="text-orange-800 text-4xl md:text-4xl"> City MedHub Clinic
+              </span> <br /><span className='text-2xl md:text-3xl'>Your health and wellbeing are our main responsibility.</span>
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At City MedHub Clinic, we provide comprehensive medical services tailored to individuals and families,
-              combining advanced technology with compassionate, personalized care.
+              Located at the heart of the community, we offer a wide range of medical services designed to meet the unique needs of individuals and families. Our clinic is dedicated to providing high-quality, compassionate, and personalized care in a modern, welcoming environment.
             </p>
             <div className="space-y-3">
-              {[ // Feature List
+              {[
                 { icon: Stethoscope, text: "Comprehensive Medical Services" },
                 { icon: HeartPulse, text: "Personalized Patient Care" },
                 { icon: ShieldCheck, text: "Advanced Medical Technology" }
@@ -33,8 +34,6 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button
                 size="lg"
@@ -52,8 +51,6 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-
-          {/* Image Section */}
           <div className="relative flex items-center justify-center">
             <div className="relative overflow-hidden rounded-2xl shadow-lg w-full max-w-lg">
               <img
