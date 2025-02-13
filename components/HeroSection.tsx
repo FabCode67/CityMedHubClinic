@@ -79,7 +79,7 @@ const HeroSection = () => {
           <div className="relative md:flex hidden items-center justify-center">
             <div className="relative overflow-hidden rounded-2xl shadow-lg w-full max-w-lg">
               <img
-                src="/bunner.jpg"
+                src="/images/bunner.jpg"
                 alt="Medical Consultation"
                 className="object-cover h-full w-full transform hover:scale-105 transition-transform duration-500"
               />

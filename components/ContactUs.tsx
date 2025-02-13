@@ -19,7 +19,7 @@ const LocationContactPage = () => {
               <div className="bg-white rounded-xl shadow-lg md:p-6 p-1">
 
                 <img
-                  src="/home2.jpg"
+                  src="/images/home2.jpg"
                   alt="City MedHub Clinic Location"
                   width={800}
                   height={600}
