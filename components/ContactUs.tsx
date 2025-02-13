@@ -1,38 +1,34 @@
 import React from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
+import {
+  MapPin,
+  Phone,
+  Mail,
   Clock
 } from "lucide-react";
 
 const LocationContactPage = () => {
   return (
-    <section id='contact' className="bg-gray-50 py-16">
+    <section id='contact' className="bg-gray-50 md:py-16 py-8">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <div className="mb-8">
+            <div className="md:mb-8 mb-2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
-                <MapPin className="w-8 h-8 mr-3 text-green-700" />
                 Our Location
               </h2>
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <p className="text-gray-700 mb-4">
-                  <strong>Address:</strong> Gahanga Sector, Kicukiro District, Kigali, KK 15 Rd
-                </p>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4722034049407!2d30.098514!3d-1.9703659999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwNTgnMTMuMyJTIDMwwrAwNSczMC43IkU!5e0!3m2!1sen!2srw!4v1684234567890!5m2!1sen!2srw"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
+              <div className="bg-white rounded-xl shadow-lg md:p-6 p-1">
+
+                <img
+                  src="/home2.jpg"
+                  alt="City MedHub Clinic Location"
+                  width={800}
+                  height={600}
+                  className="rounded-xl"
+                />
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white rounded-xl md:p-8 p-2">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               Get In Touch
             </h2>
@@ -59,8 +55,19 @@ const LocationContactPage = () => {
                 </div>
               </div>
             </div>
+            <p className="text-gray-700 mt-4 flex">
+              <MapPin className="  mr-2 text-green-700" />
+
+              <strong className='mr-1'>Address:</strong> Gahanga Sector, Kicukiro District, Kigali, KK 15 Rd
+            </p>
           </div>
         </div>
+       
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.3138177530163!2d30.09796958527671!3d-2.0302266926695864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca90e59976157%3A0x40c41787cb1ad53c!2sCity%20MedHub%20Clinic!5e0!3m2!1sen!2srw!4v1739459900093!5m2!1sen!2srw" width="100%"
+          height="300" style={{ border: 0 }}
+          allowFullScreen
+           loading="lazy" ></iframe>
       </div>
     </section>
   );

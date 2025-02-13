@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import axios from 'axios';
 import {
   Phone,
   Stethoscope,
@@ -7,9 +8,33 @@ import {
   ShieldCheck
 } from "lucide-react";
 
+
 const HeroSection = () => {
+
+  const [data, setData] = React.useState(null);
+  // https://api.escuelajs.co/api/v1/products
+
+  React.useEffect(() => {
+    
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.escuelajs.co/api/v1/products');
+        setData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }
+  , []);
+
+  console.log(data);
+
   return (
     <div className="relative overflow-hidden w-full min-h-screen flex items-center bg-white">
+
+
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-white opacity-70 z-0" />
       <div className="container lg:py-0 py-12 px-4 md:px-8 max-w-7xl w-full mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -51,10 +76,10 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="relative flex items-center justify-center">
+          <div className="relative md:flex hidden items-center justify-center">
             <div className="relative overflow-hidden rounded-2xl shadow-lg w-full max-w-lg">
               <img
-                src="https://st.depositphotos.com/1594308/2526/i/450/depositphotos_25265551-stock-photo-medical-consultation.jpg"
+                src="/bunner.jpg"
                 alt="Medical Consultation"
                 className="object-cover h-full w-full transform hover:scale-105 transition-transform duration-500"
               />

@@ -10,7 +10,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
-                src="https://african.land/oc-content/plugins/blog/img/blog/1550.jpg"
+                src="/about2.jpg"
                 alt="City MedHub Clinic Interior"
                 className="w-full h-[600px] object-cover"
               />
