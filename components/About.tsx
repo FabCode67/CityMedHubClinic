@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 py-16 md:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className="relative">
+          <div className="relative md:block hidden">
             <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
                 src="/images/about2.jpg"

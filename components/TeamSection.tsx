@@ -57,7 +57,7 @@ const TeamPage = () => {
             whileHover={{ scale: 1.01 }}
             className="p-6 shadow rounded-xl flex flex-col items-center md:w-[30%] w-full md:h-[33rem] h-fit space-y-4"
           >
-            <img src="/gm1.jpg" alt="team" className="object-cover h-[70%]" />
+            <img src="/gm1.jpg" alt="team" className="object-cover md:h-[70%] h-[18rem]" />
             <div className="text-center">
               <h3 className="text-lg font-medium text-gray-800">Godfrey Gafirita</h3>
             </div>
@@ -78,7 +78,8 @@ const TeamPage = () => {
                 <FaWhatsapp size={20} />
               </a>
             </div>
-          </motion.div>             </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
