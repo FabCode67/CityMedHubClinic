@@ -12,32 +12,32 @@ import { FaTooth } from 'react-icons/fa';
 const ServicesPage = () => {
   const services = [
     {
-      icon: <Baby className="w-12 h-12 text-orange-700" />,
+      icon: <Baby className="w-12 h-12 text-[#E95143]" />,
       title: "Pediatrics",
       description: "Comprehensive healthcare for infants, children, and adolescents."
     },
     {
-      icon: <Heart className="w-12 h-12 text-orange-700" />,
+      icon: <Heart className="w-12 h-12 text-[#E95143]" />,
       title: "Internal Medicine",
       description: "Specialized care for adult health conditions and preventive medicine."
     },
     {
-      icon: <BookOpen className="w-12 h-12 text-orange-700" />,
+      icon: <BookOpen className="w-12 h-12 text-[#E95143]" />,
       title: "Gynecology & Obstetrics",
       description: "Women's health services from routine check-ups to specialized care."
     },
     {
-      icon: <Stethoscope className="w-12 h-12 text-orange-700" />,
+      icon: <Stethoscope className="w-12 h-12 text-[#E95143]" />,
       title: "General Medicine",
       description: "Comprehensive medical care for patients of all ages."
     },
     {
-      icon: <FaTooth className="w-12 h-12 text-orange-700" />,
+      icon: <FaTooth className="w-12 h-12 text-[#E95143]" />,
       title: "Dentistry",
       description: "Complete dental care and oral health services."
     },
     {
-      icon: <Microscope className="w-12 h-12 text-orange-700" />,
+      icon: <Microscope className="w-12 h-12 text-[#E95143]" />,
       title: "Laboratory Services",
       description: "Advanced diagnostic testing and medical laboratory analysis."
     }
@@ -47,7 +47,7 @@ const ServicesPage = () => {
     <section id='services' className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
-          <Stethoscope className="mx-auto w-16 h-16 text-orange-700 mb-4" />
+          <Stethoscope className="mx-auto w-16 h-16 text-blue-700 mb-4" />
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Our Medical Services
           </h1>
