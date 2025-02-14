@@ -61,11 +61,14 @@ const PartnersPage = () => {
                 <div 
                   key={index} 
                   className="flex items-center justify-center p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors"
+                  // className="flex items-center justify-center p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors"
                 >
                   <img 
                     src={logo} 
                     alt={`Insurance Provider ${index + 1}`}
-                    className="max-h-16 max-w-full grayscale hover:grayscale-0 transition-all"
+                    className="max-h-16 max-w-full transition-all"
+
+                    // className="max-h-16 max-w-full grayscale hover:grayscale-0 transition-all"
                   />
                 </div>
               ))}
