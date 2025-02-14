@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, FileCheck, CreditCard, HeartPulse } from "lucide-react";
+import {HeartPulse } from "lucide-react";
 
 const PartnersPage = () => {
   const insuranceLogos = [
@@ -20,23 +20,23 @@ const PartnersPage = () => {
     "/magerwa.jpg",
   ];
 
-  const insuranceFeatures = [
-    {
-      icon: Shield,
-      title: "Extensive Coverage",
-      description: "We work with a wide network of insurance providers to maximize your coverage."
-    },
-    {
-      icon: FileCheck,
-      title: "Simplified Billing",
-      description: "Our team helps navigate insurance claims and paperwork efficiently."
-    },
-    {
-      icon: CreditCard,
-      title: "Flexible Payment Options",
-      description: "Multiple payment plans and financial assistance programs available."
-    }
-  ];
+  // const insuranceFeatures = [
+  //   {
+  //     icon: Shield,
+  //     title: "Extensive Coverage",
+  //     description: "We work with a wide network of insurance providers to maximize your coverage."
+  //   },
+  //   {
+  //     icon: FileCheck,
+  //     title: "Simplified Billing",
+  //     description: "Our team helps navigate insurance claims and paperwork efficiently."
+  //   },
+  //   {
+  //     icon: CreditCard,
+  //     title: "Flexible Payment Options",
+  //     description: "Multiple payment plans and financial assistance programs available."
+  //   }
+  // ];
 
   return (
     <section id='partners' className="bg-blue-50 py-16 md:py-24">

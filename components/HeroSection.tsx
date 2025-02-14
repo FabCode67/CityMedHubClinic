@@ -2,9 +2,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import {
   Phone,
-  Stethoscope,
-  HeartPulse,
-  ShieldCheck
 } from "lucide-react";
 import AppointmentModal from './AppointmentModel';
 
