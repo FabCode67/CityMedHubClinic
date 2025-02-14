@@ -47,11 +47,11 @@ const PartnersPage = () => {
             Insurance & Financial Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We work with multiple insurance providers to make your healthcare affordable and accessible.
+            We work with a wide network of insurance providers to maximize your covarage.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-1 gap-12">
         <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">
               Accepted Insurance Providers
@@ -75,7 +75,7 @@ const PartnersPage = () => {
             </div>
           </div>
           {/* Insurance Features */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             {insuranceFeatures.map(({ icon: Icon, title, description }, index) => (
               <div 
                 key={index} 
@@ -90,7 +90,7 @@ const PartnersPage = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Insurance Logos */}
           

@@ -29,7 +29,7 @@ const HeroSection = () => {
             <p className="text-lg text-gray-600 leading-relaxed">
               Located at the heart of the community, we offer a wide range of medical services designed to meet the unique needs of individuals and families. Our clinic is dedicated to providing high-quality, compassionate, and personalized care in a modern, welcoming environment.
             </p>
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               {[
                 { icon: Stethoscope, text: "Comprehensive Medical Services" },
                 { icon: HeartPulse, text: "Personalized Patient Care" },
@@ -40,7 +40,7 @@ const HeroSection = () => {
                   <span className="text-base font-medium">{text}</span>
                 </div>
               ))}
-            </div>
+            </div> */}
             <div className="flex flex-row space-x-4">
               <Button
                 // size="lg"
@@ -59,7 +59,7 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="relative md:flex hidden items-center justify-center">
+          {/* <div className="relative md:flex hidden items-center justify-center">
             <div className="relative overflow-hidden rounded-2xl shadow-lg w-full max-w-lg">
               <img
                 src="/images/bunner.jpg"
@@ -68,7 +68,7 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-blue-800/10 mix-blend-multiply" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <AppointmentModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
