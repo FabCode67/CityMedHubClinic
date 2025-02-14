@@ -5,8 +5,9 @@ import {
   ShieldCheck,
   Users,
   Trophy,
-  Clock
 } from "lucide-react";
+import { HeartPulse, Stethoscope } from "lucide-react";
+
 
 const FacilitiesPage = () => {
   const coreValues = [
@@ -38,7 +39,7 @@ const FacilitiesPage = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Mission Statement */}
           <div className="bg-blue-50 lg:p-10 md:p-5 p-2 rounded-2xl shadow-lg">
-            <div className="bg-blue-50 lg:p-10 md:p-5 p-2 rounded-2xl shadow-lg">
+            <div className="bg-blue-50 lg:px-10  md:p-5 p-2 rounded-2xl shadow-lg">
               <div className="flex items-center mb-6">
                 <Target className="w-12 h-12 text-blue-800 mr-4" />
                 <h2 className="text-3xl font-bold text-blue-900">Our Mission</h2>
@@ -50,7 +51,36 @@ const FacilitiesPage = () => {
                 fostering a supportive and caring environment for our patients and their families.
               </p>
             </div>
-            <div className="mt-16 bg-blue-50 rounded-xl p-8 text-center">
+
+            <div className="bg-blue-50 mt-12 p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-800 mb-6">Our Core Vision</h3>
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: Stethoscope,
+                    text: "Become a trusted hub of medical services in the region"
+                  },
+                  {
+                    icon: HeartPulse,
+                    text: "Deliver accessible, compassionate, and innovative care"
+                  },
+                  {
+                    icon: ShieldCheck,
+                    text: "Improve community health and individual well-being"
+                  }
+                ].map(({ icon: Icon, text }, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-4 text-gray-700"
+                  >
+                    <Icon className="w-6 h-6 text-[#E95143] flex-shrink-0 mt-1" />
+                    <span className="text-base">{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* <div className="mt-16 bg-blue-50 rounded-xl p-8 text-center">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="w-10 h-10 text-blue-700 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-800">
@@ -63,7 +93,7 @@ const FacilitiesPage = () => {
               <p className="text-gray-600 mt-2">
                 Always available to serve your healthcare needs
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Core Values */}

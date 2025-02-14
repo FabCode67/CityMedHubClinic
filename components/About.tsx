@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, HeartPulse, Stethoscope } from "lucide-react";
+// import { ShieldCheck, HeartPulse, Stethoscope } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -31,7 +31,7 @@ const AboutSection = () => {
           <div className="space-y-8">
            
 
-            <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
+            {/* <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-blue-800 mb-6">Our Core Vision</h3>
               <div className="space-y-4">
                 {[
@@ -57,7 +57,7 @@ const AboutSection = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
