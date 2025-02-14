@@ -56,7 +56,7 @@ const PartnersPage = () => {
             <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">
               Accepted Insurance Providers
             </h3>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid md:grid-cols-4 grid-cols-3 gap-3">
               {insuranceLogos.map((logo, index) => (
                 <div 
                   key={index} 

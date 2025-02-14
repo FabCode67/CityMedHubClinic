@@ -17,7 +17,7 @@ const teamMembers: TeamMember[] = [
     name: "Dr. Jean Paul Basabose",
     role: "Internist-Cardiologist",
     image: "/images/paul.jpg",
-    availability: "Thursdays & Saturdays"
+    availability: "Thursday & Saturday"
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
     name: "Dr. Flora F. RWIYAMILIRA",
     role: "Pediatrician",
     image: "/images/flora.jpg",
-    availability: "TMonday - Friday"
+    availability: "Monday - Friday"
   },
   {
     id: 4,
@@ -74,13 +74,13 @@ const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-4">
           {teamMembers.map((member) => (
             <div
               key={member.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2"
             >
-              <div className="relative h-64 w-full">
+              <div className="relative md:h-64 h-56 w-full">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -90,11 +90,11 @@ const TeamSection = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <div className="md:p-6 p-2">
+                <h3 className="md:text-xl text-sm font-semibold text-gray-900 md:mb-2 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 font-medium mb-2">
+                <p className="text-blue-600 md:text-base text-sm font-medium md:mb-2 mb-1">
                   {member.role}
                 </p>
 
@@ -103,7 +103,7 @@ const TeamSection = () => {
                   <h4 className="text-sm font-semibold text-gray-900 mb-1">
                     Availability
                   </h4>
-                  <p className="text-sm text-gray-600">
+                  <p className="md:text-sm text-xs text-gray-600">
                     {member.availability}
                   </p>
                 </div>
