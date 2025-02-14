@@ -41,18 +41,18 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-row space-x-4">
               <Button
-                size="lg"
+                // size="lg"
                 onClick={() => setModalOpen(true)}
-                className="bg-blue-800 text-white hover:bg-blue-900 rounded-md transition-colors duration-300 w-full sm:w-auto"
+                className="bg-blue-800 text-white hover:bg-blue-900 rounded-md transition-colors duration-300 "
               >
                 Book Appointment
               </Button>
               <Button
                 variant="outline"
-                size="lg"
-                className="text-blue-800 border-blue-800 hover:bg-blue-50 transition-colors duration-300 w-full sm:w-auto gap-2"
+                // size="lg"
+                className="text-blue-800 border-blue-800 hover:bg-blue-50 transition-colors duration-300  gap-2"
               >
                 <Phone className="w-5 h-5" />
                 Contact Us
