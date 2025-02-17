@@ -11,7 +11,7 @@ const AboutSection = () => {
           <div className="relative md:block hidden">
             <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
-                src="/images/imge.jpg"
+                src="/imge.jpg"
                 alt="City MedHub Clinic Interior"
                 className="w-full h-[500px] object-cover"
               />
