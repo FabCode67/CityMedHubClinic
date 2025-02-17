@@ -80,20 +80,7 @@ const FacilitiesPage = () => {
               </div>
             </div>
 
-            {/* <div className="mt-16 bg-blue-50 rounded-xl p-8 text-center">
-              <div className="flex items-center justify-center mb-4">
-                <Clock className="w-10 h-10 text-blue-700 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-800">
-                  Clinic Working Hours
-                </h2>
-              </div>
-              <p className="text-lg text-gray-700">
-                24/7 Emergency and Comprehensive Care
-              </p>
-              <p className="text-gray-600 mt-2">
-                Always available to serve your healthcare needs
-              </p>
-            </div> */}
+           
           </div>
 
           {/* Core Values */}
