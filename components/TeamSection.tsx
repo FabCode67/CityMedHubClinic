@@ -8,51 +8,51 @@ interface TeamMember {
   name: string;
   role: string;
   image: string;
-  availability: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Dr. Jean Paul Basabose",
-    role: "Internist-Cardiologist",
-    image: "/images/paul.jpg",
-    availability: "Thursday & Saturday"
-  },
-  {
-    id: 2,
     name: "Dr. Linda MUNEZERO",
     role: "Head of Clinical Activities",
     image: "/linda.jpg",
-    availability: "Monday - Friday"
   },
   {
-    id: 3,
+    id: 2,
     name: "Dr. Flora F. RWIYAMILIRA",
     role: "Pediatrician",
     image: "/images/flora.jpg",
-    availability: "Monday - Friday"
   },
+  {
+    id: 3,
+    name: "Dr. Jean Paul Basabose",
+    role: "Internist-Cardiologist",
+    image: "/images/paul.jpg",
+  },
+  
   {
     id: 4,
     name: "Dr. Aimable MURAMIRA",
     role: "General Practitioner",
     image: "/images/aimable.jpg",
-    availability: "Monday - Friday"
   },
   {
     id: 5,
     name: "Dr. Lyse BUTUNGANE",
     role: "General Practitione",
     image: "/images/lyse.jpg",
-    availability: "Monday - Friday"
   },
   {
     id: 6,
     name: "Stephen Kalisa",
     role: "Dentist",
     image: "/images/kalisa.jpg",
-    availability: "Monday - Friday"
+  },
+  {
+    id: 7,
+    name: "Dr. Nadine Uwitonze",
+    role: "General Practitioner",
+    image: "/images/nadine.jpg",
   }
 ];
 
@@ -97,16 +97,6 @@ const TeamSection = () => {
                 <p className="text-blue-600 md:text-base text-sm font-medium md:mb-2 mb-1">
                   {member.role}
                 </p>
-
-
-                <div className="pt-4 border-t border-gray-200">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-1">
-                    Availability
-                  </h4>
-                  <p className="md:text-sm text-xs text-gray-600">
-                    {member.availability}
-                  </p>
-                </div>
               </div>
             </div>
           ))}
