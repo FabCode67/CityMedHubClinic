@@ -33,7 +33,7 @@ const HeroSection = () => {
             </p>
             <div className="space-y-3">
               {[
-                { icon: PhoneCall, text: "+250 3323 322 322", link: "tel:+2503323322322" },
+                { icon: PhoneCall, text: "+250 780 553 772", link: "tel:+250 780 553 772" },
                 { icon: MessageSquare, text: "info@citymedhubclinic.rw", link: "mailto:info@citymedhubclinic.rw" }
               ].map(({ icon: Icon, text, link }, index) => (
                 <div key={index} className="flex items-center space-x-3 text-[#E95143]">
