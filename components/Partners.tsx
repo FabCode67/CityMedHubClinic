@@ -44,7 +44,7 @@ const PartnersPage = () => {
         <div className="text-center mb-12">
           <HeartPulse className="mx-auto w-16 h-16 text-blue-800 mb-4" />
           <h2 className="text-4xl font-bold text-blue-900 mb-4">
-            Insurance & Financial Services
+          Our Partners
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We work with a wide network of insurance providers to maximize your covarage.

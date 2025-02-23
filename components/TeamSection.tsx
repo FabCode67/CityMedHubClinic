@@ -25,35 +25,43 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Dr. Jean Paul Basabose",
-    role: "Internist-Cardiologist",
+    name: "Dr. Jean Paul BASABOSE",
+    role: " Internal Medicine Specialist/ Cardiologist",
     image: "/images/paul.jpg",
   },
-  
   {
     id: 4,
+    name: "Dr. Dan BUTARE",
+    role: "Gynecologist & Obstetrician",
+    image: "/dan.jpg",
+  },
+  {
+    id: 5,
+    name: "Dr. Lyse BUTUNGANE",
+    role: "General Practitioner",
+    image: "/images/lyse.jpg",
+  },
+  {
+    id: 6,
     name: "Dr. Aimable MURAMIRA",
     role: "General Practitioner",
     image: "/images/aimable.jpg",
   },
   {
-    id: 5,
-    name: "Dr. Lyse BUTUNGANE",
-    role: "General Practitione",
-    image: "/images/lyse.jpg",
+    id: 7,
+    name: "Dr. Nadine UWITONZE",
+    role: "General Practitioner",
+    image: "/images/nadine.jpg",
   },
+
   {
-    id: 6,
-    name: "Stephen Kalisa",
+    id: 8,
+    name: "Stephen KALISA",
     role: "Dentist",
     image: "/images/kalisa.jpg",
   },
-  {
-    id: 7,
-    name: "Dr. Nadine Uwitonze",
-    role: "General Practitioner",
-    image: "/images/nadine.jpg",
-  }
+
+
 ];
 
 const TeamSection = () => {
@@ -65,7 +73,7 @@ const TeamSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Meet Our Expert Medical Team
+            Meet Our Medical Team
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our highly qualified healthcare professionals are dedicated to providing

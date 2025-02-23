@@ -34,26 +34,15 @@ const FacilitiesPage = () => {
   ];
 
   return (
-    <section id='facilities' className="bg-white py-16 md:py-24">
+    <section id='facilities' className="bg-white py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Mission Statement */}
           <div className="bg-blue-50 lg:p-10 md:p-5 p-2 rounded-2xl shadow-lg">
-            <div className="bg-blue-50 lg:px-10  md:p-5 p-2 rounded-2xl shadow-lg">
-              <div className="flex items-center mb-6">
-                <Target className="w-12 h-12 text-blue-800 mr-4" />
-                <h2 className="text-3xl font-bold text-blue-900">Our Mission</h2>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                To provide high-quality, patient-centered healthcare services in a compassionate
-                and efficient manner. We strive to promote wellness, prevent illness, and treat
-                medical conditions with the latest advancements in medical technology, all while
-                fostering a supportive and caring environment for our patients and their families.
-              </p>
-            </div>
+          
 
-            <div className="bg-blue-50 mt-12 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-blue-800 mb-6">Our Core Vision</h3>
+            <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-800 mb-6">Our Vision</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -79,7 +68,18 @@ const FacilitiesPage = () => {
                 ))}
               </div>
             </div>
-
+            <div className="bg-blue-50 mt-12 lg:px-10  md:p-5 p-2 rounded-2xl shadow-lg">
+              <div className="flex items-center mb-6">
+                <Target className="w-12 h-12 text-blue-800 mr-4" />
+                <h2 className="text-3xl font-bold text-blue-900">Our Mission</h2>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                To provide high-quality, patient-centered healthcare services in a compassionate
+                and efficient manner. We strive to promote wellness, prevent illness, and treat
+                medical conditions with the latest advancements in medical technology, all while
+                fostering a supportive and caring environment for our patients and their families.
+              </p>
+            </div>
            
           </div>
 
