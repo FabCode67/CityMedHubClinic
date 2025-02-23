@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 4,
     name: "Dr. Dan BUTARE",
-    role: "Gynecologist & Obstetrician",
+    role: "Gynecolgy & Obstetrics Specialist",
     image: "/dan.jpg",
   },
   {
