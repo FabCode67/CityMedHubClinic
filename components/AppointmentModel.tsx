@@ -40,7 +40,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
     
     if (formData.contactMethod === 'whatsapp') {
       const message: string = `New Appointment Request:\nName: ${formData.name}\nDate: ${formData.date}\nTime: ${formData.time}\nReason: ${formData.reason}`;
-      const phoneNumber: string = '+250780553772';
+      const phoneNumber: string = '+250780553722';
       const whatsappUrl: string = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     } else {

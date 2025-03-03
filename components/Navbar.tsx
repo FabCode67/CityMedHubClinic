@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import Image from 'next/image';
 import AppointmentModal from './AppointmentModel';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,11 +16,7 @@ const Navbar = () => {
         <Link href="/" className="text-medblue font-bold text-xl">
           <Image height={300} width={300} src="/logoo.jpg" alt="Amaris" className=" object-cover" />
         </Link>
-        <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-medblue focus:outline-none">
-            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
-        </div>
+       
         <div className={`md:flex space-x-8 text-medblue ${menuOpen ? 'block' : 'hidden'} md:block hidden`}>
           <Link href="/" className="hover:text-blue-900">Home</Link>
           <Link href="#about" className="hover:text-blue-900">About us</Link>
@@ -29,10 +26,15 @@ const Navbar = () => {
           <Link href="#facilities" className="hover:text-blue-900">Facilities</Link>
           <Link href="#contact" className="hover:text-blue-900">Contact us</Link>
         </div>
-        <div className="space-x-4 hidden md:block">
-          <Button
-            onClick={() => setModalOpen(true)}
-            className="text-white border-medblue bg-blue-800 rounded-full">BOOK APPOINTMENT</Button>
+        <div>
+          <a href="https://wa.me/+250780553722" className="flex items-center md:space-x-2 space-x-1">
+            <FaWhatsapp size={24} /> <span className='hidden md:flex justify-center my-auto mr-2'>Connect on WhatsApp</span>
+          </a>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-medblue focus:outline-none">
+            {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
         </div>
       </div>
       {menuOpen && (
