@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Button } from './ui/button';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import Image from 'next/image';
